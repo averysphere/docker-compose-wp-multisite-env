@@ -1,0 +1,53 @@
+# Numerous always-ignore extensions
+*.diff
+*.err
+*.orig
+*.log
+*.rej
+*.swo
+*.swp
+*.vi
+*~
+*.sass-cache
+
+# OS or Editor folders
+.DS_Store
+Thumbs.db
+.cache
+.project
+.settings
+.tmproj
+*.esproj
+nbproject
+*.sublime-project
+*.sublime-workspace
+
+# Dreamweaver added files
+_notes
+dwsync.xml
+
+# Folders to ignore
+.hg
+.svn
+.CVS
+intermediate
+.idea
+cache
+
+# And more Harvey-related stuff
+phpcs.xml*
+phpunit.xml*
+phpcs.xml
+phpunit.xml
+wp-cli.local.yml
+node_modules/
+*.sql
+*.tar.gz
+*.zip
+.vscode
+*.vscode
+*.komodoproject
+.komodotools
+wp-cli.*
+wordpress/
+mysql/
