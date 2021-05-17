@@ -30,9 +30,19 @@ services:
         volumes:
             - ./wordpress:/var/www/html
     wp:
-        build:
-            context: .
-            dockerfile: php.dockerfile
-        entrypoint: ['wp', '--allow-root']
+        #build:
+        #    context: .
+        #    dockerfile: php.dockerfile
+        
+        image: wordpress:cli-2.4-php7.4
+        depends_on:
+            - php
+            - mysql
+        environment:
+            WORDPRESS_DB_HOST: mysql
+            WORDPRESS_DB_USER: 'wp'
+            WORDPRESS_DB_NAME: 'wp'
+            WORDPRESS_DB_PASSWORD: 'secret'
+        #entrypoint: ['wp', '--allow-root']
         volumes:
             - ./wordpress:/var/www/html
