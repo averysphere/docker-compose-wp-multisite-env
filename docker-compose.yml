@@ -4,6 +4,7 @@ services:
         build:
           context: .
           dockerfile: nginx.dockerfile
+        restart: always
         ports:
           - 8001:80
         volumes:
@@ -27,6 +28,7 @@ services:
         build:
             context: .
             dockerfile: php.dockerfile
+        restart: always
         volumes:
             - ./wordpress:/var/www/html
     wp:
