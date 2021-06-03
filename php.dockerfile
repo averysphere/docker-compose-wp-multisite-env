@@ -1,5 +1,6 @@
 FROM php:7.4-fpm-buster
 ADD ./php/www.conf /usr/local/etc/php-fpm.d/www.conf
+RUN ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 RUN addgroup --gid 1000 wp && adduser --gid 1000 --shell /bin/sh wp
 RUN mkdir -p /var/www/html
 RUN chown wp:wp /var/www/html
