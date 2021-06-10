@@ -13,7 +13,9 @@ services:
           - php
           - mysql
     mysql:
-        image: mysql:latest
+        build:
+            context: .
+            dockerfile: mysql.dockerfile
         restart: always
         ports:
             - 3306:3306
