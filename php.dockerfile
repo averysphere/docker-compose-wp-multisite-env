@@ -12,3 +12,4 @@ RUN curl -O https://raw.githubusercontent.com/wp-cli/builds/gh-pages/phar/wp-cli
 COPY cron.conf /etc/cron.d/wordpress_cron
 RUN chmod 0644 /etc/cron.d/wordpress_cron
 RUN crontab /etc/cron.d/wordpress_cron
+RUN service cron status
