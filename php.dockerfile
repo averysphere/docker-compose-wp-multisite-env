@@ -1,4 +1,4 @@
-FROM php:7.4-fpm-buster
+FROM php:8.0-fpm-buster
 ADD ./php/www.conf /usr/local/etc/php/php.ini
 RUN ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 RUN addgroup --gid 1000 wp && adduser --gid 1000 --shell /bin/sh wp
