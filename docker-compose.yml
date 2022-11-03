@@ -34,7 +34,7 @@ services:
         volumes:
             - ./wordpress:/var/www/html
     wp:
-        image: wordpress:cli-php7.4
+        image: wordpress:cli-php8.0
         depends_on:
             - php
             - mysql

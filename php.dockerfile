@@ -1,7 +1,9 @@
+#!/bin/sh
 FROM php:8.0-fpm-buster
 ADD ./php/www.conf /usr/local/etc/php/php.ini
 RUN ln -sf /usr/share/zoneinfo/Asia/Manila /etc/localtime
 RUN addgroup --gid 1000 wp && adduser --gid 1000 --shell /bin/sh wp
+RUN mkdir /var/log/error_log
 RUN mkdir -p /var/www/html
 RUN chown wp:wp /var/www/html
 WORKDIR /var/www/html
