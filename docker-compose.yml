@@ -1,9 +1,9 @@
 version: '3.9'
 services:
-    nginx:
+    httpd:
         build:
           context: .
-          dockerfile: nginx.dockerfile
+          dockerfile: httpd.dockerfile
         restart: always
         ports:
           - 80:80
@@ -43,5 +43,7 @@ services:
             WORDPRESS_DB_USER: 'wp'
             WORDPRESS_DB_NAME: 'wp'
             WORDPRESS_DB_PASSWORD: 'secret'
+            WORDPRESS_DEBUG: '1'
+            WP_ALLOW_MULTISITE: 'true'
         volumes:
             - ./wordpress:/var/www/html
