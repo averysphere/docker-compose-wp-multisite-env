@@ -4,7 +4,7 @@
 
 Run this using `docker compose up --build` and let Docker run the build. You may use `docker-compose` instead. Take note of the hyphen.
 
-Run `docker compose --rm run wp core download` to download the latest version of Wordpress. Make sure your `wordress` directory in this environment is writable by the Docker `wp` instance.
+Run `docker compose run --rm wp core download` to download the latest version of Wordpress. Make sure your `wordress` directory in this environment is writable by the Docker `wp` instance.
 
 ## How to enable multisite ##
 
